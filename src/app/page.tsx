@@ -121,7 +121,7 @@ export default function Home() {
             <div className="relative">
               <input
                 className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all text-lg"
-                placeholder="Search by name, city, degree..."
+                placeholder="Search by name, city, specialty, degree..."
                 onChange={onChange}
               />
             </div>
