@@ -1,8 +1,14 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
+import React from "react";
 
-const inter = Inter({ subsets: ["latin"] });
+import type { Metadata } from "next";
+import { Playfair_Display } from "next/font/google";
+import "./globals.css";
+import Header from "../components/Header";
+
+const playfairDisplay = Playfair_Display({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+});
 
 export const metadata: Metadata = {
   title: "Solace Candidate Assignment",
@@ -16,7 +22,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={playfairDisplay.className}>
+        <Header />
+        <main className="pt-headerHeight">{children}</main>
+      </body>
     </html>
   );
 }
